@@ -1,41 +1,52 @@
-/*var arrayNum=[1,2,3,4,5];
-
-var reverseArray=arrayNum.reverse();
-
-console.log(reverseArray);
-
-
-var creditCardNum=(prompt('ingresa tu número de tarjeta'));
-
-var cardArray= [];
-
-for (var i=0; i<creditCardNum.length; i++){
-  
- cardArray.push(creditCardNum[i]);
- var reverseCard=cardArray.reverse();
-}
-
-console.log(reverseCard);
-*/
-
 
 var isValidCard= function(array){
     
   var evenPosition=[];
-  var evenPositionMult=[];
+  var creditCardNum=prompt('Ingrese número de tarjeta');
   
-   for (var i=0; i<array.length; i++){
-    
-       if ((array).indexOf(i) %2 ===0){
-          evenPosition.push(array[i]);
-   }
-    
-   }
-   
-    return evenPosition;
+  var isValidCard=function (creditCardNum) {
   
+  while(creditCardNum==="" || isNaN(parseInt(creditCardNum))) {
+    
+    creditCardNum=prompt('Ingresa números de tu tarjeta');
+    
+  }
+  //convirtiendo a array y volteando
+  var toArrayReverseNum=creditCardNum.split("").reverse();
+  console.log(toArrayReverseNum);
+  
+  
+  for (var i=0; i<toArrayReverseNum.length; i++){
+      var evenOperation=[];
+      var sum=[];
+      if((i+1)%2===0){
+        evenOperation=toArrayReverseNum[i]*2;
+        toArrayReverseNum[i]=evenOperation
+      if (evenOperation>=10){
+      evenOperation=parseInt((evenOperation/10)+(evenOperation%10));
+        toArrayReverseNum[i]=evenOperation;
+        
+      }
+      
+    }
+       else{
+         toArrayReverseNum[i]=parseInt(toArrayReverseNum[i]);
+       }
+       sum=sum + parseInt(toArrayReverseNum[i]);
     
   }
   
-  console.log(isValidCard([2,3,4,5,4,5,6,7]));
+  
+  var moduloOp = sum%10;
+  if (moduloOp===0){
+    return "Tarjeta válida";
+  }
+  else{
+   return "Tarjeta inválida ";
+  }
+  }
+  console.log(isValidCard(creditCardNum));
+  
+  
+  
   

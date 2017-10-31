@@ -2,7 +2,7 @@ var text=prompt('ingresa tu frase');
 var toUpperText= text.toUpperCase();
 console.log(toUpperText);
 
-//if(toUpperCase/^d/.test || toUpperCase /^s/.test ){
+//if(toUpperCase/^d/.test || toUpperCase /^s/.test ){ no sirvió, 
 /*
 while(toUpperText ==='' || toUpperText!==='String' ){
   text=prompt('ingresa tu frase');
@@ -42,7 +42,7 @@ var decipher= function(toUpperText){
 console.log(decipher(toUpperText));
 
 
-//-65-33)%26+65;
+//  la formula salía raro para descifrar así que en vez de esto(-65-33)%26+65;) solo quedó mas 26.
 
 
 
