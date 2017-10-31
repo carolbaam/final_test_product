@@ -6,11 +6,11 @@ var toUpperText= text.toUpperCase();
 console.log(toUpperText);
 
 //validar casos si es número o si hay string vacío regresar prompt
-//if(toUpperCase/^d/.test || toUpperCase /^s/.test ){ prueba no sirvió, no sé cómo usarlo bien
-/* arreglar
-while(toUpperText ==='' || toUpperText!==='String' ){
-  text=prompt('ingresa tu frase');
+/*
+if( typeof toUpperText =='number' ){
+  toUpperText=prompt('Ingresa tu frase sin caracteres numéricos');
 }
+*/
 
 console.log()
 */

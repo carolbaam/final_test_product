@@ -24,3 +24,4 @@ luego restarle 65 para volver a estar en índice 0 y poder sumarle 33 y sacar el
 4.3 volver a pasar eso resultante por String.charCode para que ahora nus devuelva letras en lugar de números.
 5..- hacer lo mismo para descifrar
 
+! [diagrama de flujo]http://subefotos.com/ver/?dab032b6f87825d038b39e2a62f33008o.png
