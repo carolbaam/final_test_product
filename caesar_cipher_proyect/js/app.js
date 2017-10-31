@@ -1,15 +1,20 @@
+
+//crear prompt para introducir la frase
 var text=prompt('ingresa tu frase');
+//variable para convertir minúsculas a mayusculas
 var toUpperText= text.toUpperCase();
 console.log(toUpperText);
 
-//if(toUpperCase/^d/.test || toUpperCase /^s/.test ){ no sirvió, 
-/*
+//validar casos si es número o si hay string vacío regresar prompt
+//if(toUpperCase/^d/.test || toUpperCase /^s/.test ){ prueba no sirvió, no sé cómo usarlo bien
+/* arreglar
 while(toUpperText ==='' || toUpperText!==='String' ){
   text=prompt('ingresa tu frase');
 }
 
 console.log()
 */
+//crear función para cifrar, (recorrer string, convertir a ascii,aplicar fórmula, regresar a ascii, devolver letra en vez de número)
 var cipher= function(toUpperText){
   var cipherText="";
   for (var i=0; i<toUpperText.length; i++){
@@ -25,11 +30,12 @@ var cipher= function(toUpperText){
 
 console.log(cipher(toUpperText));
 
+// crear variable para descifrar( lo mismo solo que en la operación hay algo raro y encontré que solo sumando 26 daba el resultado)
 var decipher= function(toUpperText){
   var decipherText="";
   for (var i=0; i<toUpperText.length; i++){
     
-    var textChar=(toUpperText.charCodeAt(i)+26)%26+65;
+    var textChar=(toUpperText.charCodeAt(i)+26)%26+65; //aqui
     
     decipherText+= String.fromCharCode(textChar);
  
@@ -42,7 +48,7 @@ var decipher= function(toUpperText){
 console.log(decipher(toUpperText));
 
 
-//  la formula salía raro para descifrar así que en vez de esto(-65-33)%26+65;) solo quedó mas 26.
+//  la formula salía raro para descifrar así que en vez de esto(-65-33)%26+65;) solo quedó + 26.
 
 
 

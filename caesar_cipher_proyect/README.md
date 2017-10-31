@@ -22,5 +22,5 @@ El usuario no debe poder ingresar un campo vacío o que contenga números
 luego restarle 65 para volver a estar en índice 0 y poder sumarle 33 y sacar el módulo
 4.2sumar de nuevo 65 para volver a estar en código ascii 
 4.3 volver a pasar eso resultante por String.charCode para que ahora nus devuelva letras en lugar de números.
-
+5..- hacer lo mismo para descifrar
 
