@@ -37,9 +37,9 @@
   //realizar operación modulo10 a la suma total para saber si es valida o no
          var moduloOp = sum%10;
               if (moduloOp===0){
-                 return "Tarjeta válida";
+                 alert( "Tarjeta válida");
               } else {
-                  return "Tarjeta inválida ";
+                  alert ("Tarjeta inválida ");
              }
              }
           
