@@ -12,7 +12,7 @@ while (isNaN(parseInt(toUpperText))==false ){
 
 
 console.log()
-*/
+
 //crear función para cifrar, (recorrer string, convertir a ascii,aplicar fórmula, regresar a ascii, devolver letra en vez de número)
 var cipher= function(toUpperText){
   var cipherText="";
@@ -23,7 +23,7 @@ var cipher= function(toUpperText){
  
   }
   
-  return cipherText;
+  alert( cipherText);
   
 }
 
@@ -41,7 +41,7 @@ var decipher= function(toUpperText){
   }
 
   
-  return decipherText;
+  alert( decipherText);
   
 }
 console.log(decipher(toUpperText));
